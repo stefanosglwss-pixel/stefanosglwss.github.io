@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your Poster Shop</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; padding:0; background:#f7f7f9; color:#111}
+  header{background:#111;color:#fff;padding:1.2rem;text-align:center}
+  .wrap{max-width:1100px;margin:28px auto;padding:0 16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+  .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);display:flex;flex-direction:column}
+  .card img{width:100%;height:320px;object-fit:cover}
+  .card .meta{padding:12px 14px;flex:1;display:flex;flex-direction:column}
+  .title{font-weight:600;margin-bottom:6px}
+  .price{margin-bottom:10px;color:#0a6}
+  .buy{margin-top:auto}
+  .footer{font-size:0.9rem;color:#666;text-align:center;padding:18px 0}
+  .admin{font-size:0.9rem;color:#444;background:#fff;padding:12px;border-radius:8px}
+  @media (max-width:420px){.card img{height:220px}}
+</style>
+</head>
+<body>
+<header><h1 style="margin:0">Your Poster Shop</h1><p style="margin:6px 0 0;font-size:0.95rem">Handmade posters — free site, PayPal payments</p></header>
+
+<main class="wrap">
+  <section style="margin-bottom:18px">
+    <div class="admin">
+      <strong>How to sell:</strong> Click a product's Buy button — payment handled by PayPal. To refund, log into your PayPal account > Activity > select transaction > Issue refund.
+    </div>
+  </section>
+
+  <section class="grid" id="gallery">
+    <!-- Replace these cards with your posters. 
+         Put images in an "images" folder or same folder as index.html.
+         Replace PAYPAL_BUSINESS_EMAIL or PAYPAL_BUTTON_ID with your PayPal values. -->
+    <article class="card">
+      <img src="images/poster1.jpg" alt="Poster 1">
+      <div class="meta">
+        <div class="title">Sunrise Over City — A3</div>
+        <div class="price">€14.00</div>
+        <div class="buy">
+          <!-- PayPal example: using a simple "buy now" form (replace business email) -->
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+            <input type="hidden" name="item_name" value="Sunrise Over City — A3">
+            <input type="hidden" name="amount" value="14.00">
+            <input type="hidden" name="currency_code" value="EUR">
+            <button type="submit" style="width:100%;padding:10px;border:0;border-radius:8px;background:#0070ba;color:#fff;font-weight:600">Buy with PayPal</button>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/poster2.jpg" alt="Poster 2">
+      <div class="meta">
+        <div class="title">Abstract Mountains — A2</div>
+        <div class="price">€18.00</div>
+        <div class="buy">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="YOUR_PAYPAL_BUSINESS_EMAIL">
+            <input type="hidden" name="item_name" value="Abstract Mountains — A2">
+            <input type="hidden" name="amount" value="18.00">
+            <input type="hidden" name="currency_code" value="EUR">
+            <button type="submit" style="width:100%;padding:10px;border:0;border-radius:8px;background:#0070ba;color:#fff;font-weight:600">Buy with PayPal</button>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <!-- Duplicate a card for each poster (change filename, title and price) -->
+  </section>
+
+  <section style="margin-top:24px;font-size:0.95rem;color:#444">
+    <h3>Upload & update images (easy ways)</h3>
+    <ul>
+      <li><strong>GitHub Pages</strong> — edit repo and push new image files (good control, free). I show deploy steps below.</li>
+      <li><strong>Netlify</strong> — drag & drop the site folder in the Netlify dashboard to deploy a new version (super easy for beginners).</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:18px">
+    <div class="footer">Questions? You can edit this file or replace images in /images/ and redeploy.</div>
+  </section>
+</main>
+</body>
+</html>
