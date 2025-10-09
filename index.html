@@ -23,7 +23,7 @@
   .admin{font-size:0.95rem;color:#444;background:#fff;padding:12px;border-radius:8px}
   @media (max-width:420px){.card img{height:220px}}
 
-  /* --- Lock styles for premium item --- */
+  /* Lock styles + watermark for the premium collection */
   .locked img { filter:none; opacity:1; }
   .lock-overlay {
     position:absolute; inset:0;
@@ -32,8 +32,6 @@
     color:#fff; font-weight:700; text-align:center; padding:10px;
     pointer-events:none;
   }
-
-  /* Watermark overlay */
   .locked::before{
     content:"REALART PREVIEW";
     position:absolute; inset:0;
@@ -70,14 +68,35 @@
     <article class="card">
       <img src="IMG_9602.png" alt="Poster 1 – RealArt" loading="lazy">
       <div class="meta">
-        <div class="title">TEASER</div>
-        <div class="price">0.00</div>
+        <div class="title">POSTER 1 (A3)</div>
+        <div class="price">€14.00</div>
+        <div class="buy">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="stefanosglwss@gmail.com">
             <input type="hidden" name="item_name" value="POSTER 1 (A3) — RealArt">
-            <input type="hidden" name="amount" value="0.00">
+            <input type="hidden" name="amount" value="14.00">
             <input type="hidden" name="currency_code" value="EUR">
+            <button type="submit" class="btn">Buy with PayPal</button>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <!-- PUBLIC PREVIEW #2 (PayPal sale) -->
+    <article class="card">
+      <img src="IMG_9594.png" alt="Poster 2 – RealArt" loading="lazy">
+      <div class="meta">
+        <div class="title">POSTER 2 (A2)</div>
+        <div class="price">€18.00</div>
+        <div class="buy">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="stefanosglwss@gmail.com">
+            <input type="hidden" name="item_name" value="POSTER 2 (A2) — RealArt">
+            <input type="hidden" name="amount" value="18.00">
+            <input type="hidden" name="currency_code" value="EUR">
+            <button type="submit" class="btn">Buy with PayPal</button>
           </form>
         </div>
       </div>
@@ -85,7 +104,7 @@
 
     <!-- PREMIUM COLLECTION (Payhip) -->
     <article class="card locked">
-      <img src="/thumbs/IMG_9598.png?v=3" alt="Real Art 10+ Posters Collection – locked" loading="lazy">
+      <img src="thumbs/IMG_9598.png?v=3" alt="Real Art 10+ Posters Collection – locked" loading="lazy">
       <div class="meta">
         <div class="title">Real Art 10+ Posters Collection</div>
         <p class="price">Locked — full download after purchase</p>
@@ -113,4 +132,4 @@
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 </body>
-</html>  
+</html>
